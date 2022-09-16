@@ -18,6 +18,7 @@ const processEntireTourData = async (
       areaCode
     )!;
 
+    // 세부지역 코드
     const detailAreaCode =
       tourDetailAreaInfo.data.response.body.items.item.find(
         (item: { name: string }) => item.name == detailArea
@@ -29,6 +30,7 @@ const processEntireTourData = async (
       detailAreaCode
     );
 
+    // 지역기반 관광지 정보 데이터 가공 처리
     const processedTourInfo: TourInfo =
       tourInfo.data.response.body.items.item.map(
         (item: {
