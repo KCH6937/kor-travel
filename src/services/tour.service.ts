@@ -23,8 +23,6 @@ const processEntireTourData = async (
         (item: { name: string }) => item.name == detailArea
       ).code ?? 0;
 
-    console.log(detailAreaCode);
-
     // 지역기반 관광지 정보 Open API 호출
     const tourInfo = await openAPI.getTourBasedAreaAsJson(
       areaCode,
